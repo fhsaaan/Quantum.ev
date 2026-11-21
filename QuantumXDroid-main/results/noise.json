@@ -1,0 +1,52 @@
+[
+ {
+  "qubits": 8,
+  "two_qubit_gates": 38,
+  "depth": 63,
+  "ideal_valid": 0.999,
+  "ideal_p_opt": 0.109,
+  "noisy_valid": 0.727,
+  "noisy_p_opt": 0.076,
+  "uniform_p_opt": 0.062
+ },
+ {
+  "qubits": 8,
+  "two_qubit_gates": 47,
+  "depth": 93,
+  "ideal_valid": 0.671,
+  "ideal_p_opt": 0.225,
+  "noisy_valid": 0.513,
+  "noisy_p_opt": 0.177,
+  "uniform_p_opt": 0.062
+ },
+ {
+  "qubits": 8,
+  "two_qubit_gates": 39,
+  "depth": 68,
+  "ideal_valid": 0.922,
+  "ideal_p_opt": 0.144,
+  "noisy_valid": 0.686,
+  "noisy_p_opt": 0.113,
+  "uniform_p_opt": 0.062
+ },
+ {
+  "qubits": 8,
+  "two_qubit_gates": 36,
+  "depth": 55,
+  "ideal_valid": 1.0,
+  "ideal_p_opt": 0.077,
+  "noisy_valid": 0.786,
+  "noisy_p_opt": 0.065,
+  "uniform_p_opt": 0.062
+ },
+ {
+  "qubits": 8,
+  "two_qubit_gates": 64,
+  "depth": 125,
+  "ideal_valid": 0.854,
+  "ideal_p_opt": 0.169,
+  "noisy_valid": 0.598,
+  "noisy_p_opt": 0.099,
+  "uniform_p_opt": 0.125
+ }
+]

@@ -1,0 +1,734 @@
+[
+ {
+  "n": 10,
+  "seed": 0,
+  "proved_optimal": true,
+  "fcfs": {
+   "total_rs": 2451.2,
+   "energy_rs": 2298.4,
+   "avg_wait_min": 6.0,
+   "max_wait_min": 30.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 165.0,
+   "avg_km": 4.64
+  },
+  "milp": {
+   "total_rs": 2385.5,
+   "energy_rs": 2271.3,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 195.0,
+   "avg_km": 5.71
+  },
+  "lns_qaoa": {
+   "total_rs": 2385.5,
+   "energy_rs": 2271.3,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 195.0,
+   "avg_km": 5.71,
+   "seconds": 39.8,
+   "qubits": 12
+  },
+  "lns_exact": {
+   "total_rs": 2385.5,
+   "energy_rs": 2271.3,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 195.0,
+   "avg_km": 5.71,
+   "seconds": 0.1,
+   "qubits": 12
+  },
+  "lns_random1": {
+   "total_rs": 2417.2,
+   "energy_rs": 2310.2,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 165.0,
+   "avg_km": 5.35,
+   "seconds": 0.1,
+   "qubits": 12
+  }
+ },
+ {
+  "n": 10,
+  "seed": 1,
+  "proved_optimal": true,
+  "fcfs": {
+   "total_rs": 2074.9,
+   "energy_rs": 1935.5,
+   "avg_wait_min": 6.0,
+   "max_wait_min": 30.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 240.0,
+   "avg_km": 3.97
+  },
+  "milp": {
+   "total_rs": 2015.9,
+   "energy_rs": 1936.0,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 240.0,
+   "avg_km": 4.0
+  },
+  "lns_qaoa": {
+   "total_rs": 2015.9,
+   "energy_rs": 1936.0,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 240.0,
+   "avg_km": 4.0,
+   "seconds": 37.0,
+   "qubits": 12
+  },
+  "lns_exact": {
+   "total_rs": 2015.9,
+   "energy_rs": 1936.0,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 240.0,
+   "avg_km": 4.0,
+   "seconds": 0.1,
+   "qubits": 12
+  },
+  "lns_random1": {
+   "total_rs": 2024.0,
+   "energy_rs": 1939.6,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 255.0,
+   "avg_km": 4.22,
+   "seconds": 0.1,
+   "qubits": 12
+  }
+ },
+ {
+  "n": 10,
+  "seed": 2,
+  "proved_optimal": true,
+  "fcfs": {
+   "total_rs": 2247.1,
+   "energy_rs": 2163.3,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 225.0,
+   "avg_km": 4.19
+  },
+  "milp": {
+   "total_rs": 2247.1,
+   "energy_rs": 2163.3,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 225.0,
+   "avg_km": 4.19
+  },
+  "lns_qaoa": {
+   "total_rs": 2247.1,
+   "energy_rs": 2163.3,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 225.0,
+   "avg_km": 4.19,
+   "seconds": 36.7,
+   "qubits": 12
+  },
+  "lns_exact": {
+   "total_rs": 2247.1,
+   "energy_rs": 2163.3,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 225.0,
+   "avg_km": 4.19,
+   "seconds": 0.2,
+   "qubits": 12
+  },
+  "lns_random1": {
+   "total_rs": 2247.1,
+   "energy_rs": 2163.3,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 10,
+   "unserved": 0,
+   "peak_kw": 225.0,
+   "avg_km": 4.19,
+   "seconds": 0.1,
+   "qubits": 12
+  }
+ },
+ {
+  "n": 20,
+  "seed": 0,
+  "proved_optimal": true,
+  "fcfs": {
+   "total_rs": 5016.9,
+   "energy_rs": 4284.9,
+   "avg_wait_min": 27.0,
+   "max_wait_min": 120.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 255.0,
+   "avg_km": 4.8
+  },
+  "milp": {
+   "total_rs": 4551.7,
+   "energy_rs": 4280.6,
+   "avg_wait_min": 1.5,
+   "max_wait_min": 30.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 6.03
+  },
+  "lns_qaoa": {
+   "total_rs": 4570.6,
+   "energy_rs": 4289.2,
+   "avg_wait_min": 1.5,
+   "max_wait_min": 30.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 285.0,
+   "avg_km": 6.29,
+   "seconds": 59.0,
+   "qubits": 12
+  },
+  "lns_exact": {
+   "total_rs": 4570.6,
+   "energy_rs": 4289.2,
+   "avg_wait_min": 1.5,
+   "max_wait_min": 30.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 285.0,
+   "avg_km": 6.29,
+   "seconds": 0.1,
+   "qubits": 12
+  },
+  "lns_random1": {
+   "total_rs": 4730.5,
+   "energy_rs": 4345.4,
+   "avg_wait_min": 6.0,
+   "max_wait_min": 60.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 240.0,
+   "avg_km": 6.63,
+   "seconds": 0.1,
+   "qubits": 12
+  }
+ },
+ {
+  "n": 20,
+  "seed": 1,
+  "proved_optimal": true,
+  "fcfs": {
+   "total_rs": 4668.8,
+   "energy_rs": 4166.3,
+   "avg_wait_min": 16.5,
+   "max_wait_min": 60.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 270.0,
+   "avg_km": 4.31
+  },
+  "milp": {
+   "total_rs": 4448.1,
+   "energy_rs": 4202.1,
+   "avg_wait_min": 1.5,
+   "max_wait_min": 30.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.4
+  },
+  "lns_qaoa": {
+   "total_rs": 4494.1,
+   "energy_rs": 4047.4,
+   "avg_wait_min": 10.5,
+   "max_wait_min": 150.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.92,
+   "seconds": 53.0,
+   "qubits": 12
+  },
+  "lns_exact": {
+   "total_rs": 4494.1,
+   "energy_rs": 4047.4,
+   "avg_wait_min": 10.5,
+   "max_wait_min": 150.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.92,
+   "seconds": 0.1,
+   "qubits": 12
+  },
+  "lns_random1": {
+   "total_rs": 4668.8,
+   "energy_rs": 4166.3,
+   "avg_wait_min": 16.5,
+   "max_wait_min": 60.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 270.0,
+   "avg_km": 4.31,
+   "seconds": 0.1,
+   "qubits": 12
+  }
+ },
+ {
+  "n": 20,
+  "seed": 2,
+  "proved_optimal": true,
+  "fcfs": {
+   "total_rs": 5141.7,
+   "energy_rs": 4637.7,
+   "avg_wait_min": 16.5,
+   "max_wait_min": 60.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 285.0,
+   "avg_km": 4.35
+  },
+  "milp": {
+   "total_rs": 4867.9,
+   "energy_rs": 4650.7,
+   "avg_wait_min": 0.0,
+   "max_wait_min": 0.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.43
+  },
+  "lns_qaoa": {
+   "total_rs": 4886.6,
+   "energy_rs": 4645.6,
+   "avg_wait_min": 1.5,
+   "max_wait_min": 30.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.28,
+   "seconds": 53.1,
+   "qubits": 12
+  },
+  "lns_exact": {
+   "total_rs": 4886.6,
+   "energy_rs": 4645.6,
+   "avg_wait_min": 1.5,
+   "max_wait_min": 30.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.28,
+   "seconds": 0.2,
+   "qubits": 12
+  },
+  "lns_random1": {
+   "total_rs": 5105.4,
+   "energy_rs": 4648.4,
+   "avg_wait_min": 13.5,
+   "max_wait_min": 60.0,
+   "served": 20,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 4.68,
+   "seconds": 0.1,
+   "qubits": 12
+  }
+ },
+ {
+  "n": 30,
+  "seed": 0,
+  "proved_optimal": true,
+  "fcfs": {
+   "total_rs": 7873.1,
+   "energy_rs": 6596.8,
+   "avg_wait_min": 31.0,
+   "max_wait_min": 150.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 285.0,
+   "avg_km": 5.77
+  },
+  "milp": {
+   "total_rs": 7073.4,
+   "energy_rs": 6448.5,
+   "avg_wait_min": 7.0,
+   "max_wait_min": 150.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 6.91
+  },
+  "lns_qaoa": {
+   "total_rs": 7078.1,
+   "energy_rs": 6414.7,
+   "avg_wait_min": 8.0,
+   "max_wait_min": 150.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 7.06,
+   "seconds": 51.8,
+   "qubits": 12
+  },
+  "lns_exact": {
+   "total_rs": 7078.1,
+   "energy_rs": 6414.7,
+   "avg_wait_min": 8.0,
+   "max_wait_min": 150.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 7.06,
+   "seconds": 0.2,
+   "qubits": 12
+  },
+  "lns_random1": {
+   "total_rs": 7476.7,
+   "energy_rs": 6294.8,
+   "avg_wait_min": 24.0,
+   "max_wait_min": 180.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 7.7,
+   "seconds": 0.2,
+   "qubits": 12
+  }
+ },
+ {
+  "n": 30,
+  "seed": 1,
+  "proved_optimal": true,
+  "fcfs": {
+   "total_rs": 7099.7,
+   "energy_rs": 5992.6,
+   "avg_wait_min": 29.0,
+   "max_wait_min": 90.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 285.0,
+   "avg_km": 3.95
+  },
+  "milp": {
+   "total_rs": 6559.4,
+   "energy_rs": 5518.2,
+   "avg_wait_min": 24.0,
+   "max_wait_min": 210.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.35
+  },
+  "lns_qaoa": {
+   "total_rs": 6690.6,
+   "energy_rs": 5602.1,
+   "avg_wait_min": 25.0,
+   "max_wait_min": 210.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.64,
+   "seconds": 66.5,
+   "qubits": 12
+  },
+  "lns_exact": {
+   "total_rs": 6690.6,
+   "energy_rs": 5602.1,
+   "avg_wait_min": 25.0,
+   "max_wait_min": 210.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.64,
+   "seconds": 0.2,
+   "qubits": 12
+  },
+  "lns_random1": {
+   "total_rs": 6935.5,
+   "energy_rs": 5737.8,
+   "avg_wait_min": 31.0,
+   "max_wait_min": 210.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 285.0,
+   "avg_km": 4.46,
+   "seconds": 0.1,
+   "qubits": 12
+  }
+ },
+ {
+  "n": 30,
+  "seed": 2,
+  "proved_optimal": true,
+  "fcfs": {
+   "total_rs": 7758.3,
+   "energy_rs": 6672.0,
+   "avg_wait_min": 28.0,
+   "max_wait_min": 90.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 4.1
+  },
+  "milp": {
+   "total_rs": 7166.9,
+   "energy_rs": 6078.8,
+   "avg_wait_min": 25.0,
+   "max_wait_min": 150.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.63
+  },
+  "lns_qaoa": {
+   "total_rs": 7177.1,
+   "energy_rs": 6209.1,
+   "avg_wait_min": 21.0,
+   "max_wait_min": 150.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.63,
+   "seconds": 73.6,
+   "qubits": 12
+  },
+  "lns_exact": {
+   "total_rs": 7177.1,
+   "energy_rs": 6209.1,
+   "avg_wait_min": 21.0,
+   "max_wait_min": 150.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.63,
+   "seconds": 0.2,
+   "qubits": 12
+  },
+  "lns_random1": {
+   "total_rs": 7471.4,
+   "energy_rs": 6477.9,
+   "avg_wait_min": 22.0,
+   "max_wait_min": 150.0,
+   "served": 30,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.56,
+   "seconds": 0.2,
+   "qubits": 12
+  }
+ },
+ {
+  "n": 50,
+  "seed": 0,
+  "proved_optimal": true,
+  "fcfs": {
+   "total_rs": 13423.9,
+   "energy_rs": 9643.7,
+   "avg_wait_min": 64.2,
+   "max_wait_min": 210.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.7
+  },
+  "milp": {
+   "total_rs": 11785.2,
+   "energy_rs": 9330.3,
+   "avg_wait_min": 35.4,
+   "max_wait_min": 240.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 6.85
+  },
+  "lns_qaoa": {
+   "total_rs": 12382.5,
+   "energy_rs": 9399.4,
+   "avg_wait_min": 45.0,
+   "max_wait_min": 180.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 7.33,
+   "seconds": 81.3,
+   "qubits": 12
+  },
+  "lns_exact": {
+   "total_rs": 12382.5,
+   "energy_rs": 9399.4,
+   "avg_wait_min": 45.0,
+   "max_wait_min": 180.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 7.33,
+   "seconds": 0.3,
+   "qubits": 12
+  },
+  "lns_random1": {
+   "total_rs": 13155.6,
+   "energy_rs": 9573.2,
+   "avg_wait_min": 59.4,
+   "max_wait_min": 210.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 6.12,
+   "seconds": 0.2,
+   "qubits": 12
+  }
+ },
+ {
+  "n": 50,
+  "seed": 1,
+  "proved_optimal": true,
+  "fcfs": {
+   "total_rs": 11977.9,
+   "energy_rs": 9356.2,
+   "avg_wait_min": 44.4,
+   "max_wait_min": 150.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 4.02
+  },
+  "milp": {
+   "total_rs": 10783.4,
+   "energy_rs": 8488.3,
+   "avg_wait_min": 35.4,
+   "max_wait_min": 210.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.25
+  },
+  "lns_qaoa": {
+   "total_rs": 11094.1,
+   "energy_rs": 8491.9,
+   "avg_wait_min": 41.4,
+   "max_wait_min": 210.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.32,
+   "seconds": 73.3,
+   "qubits": 12
+  },
+  "lns_exact": {
+   "total_rs": 11109.3,
+   "energy_rs": 8485.2,
+   "avg_wait_min": 42.0,
+   "max_wait_min": 210.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.24,
+   "seconds": 0.1,
+   "qubits": 12
+  },
+  "lns_random1": {
+   "total_rs": 11621.7,
+   "energy_rs": 8914.1,
+   "avg_wait_min": 42.0,
+   "max_wait_min": 210.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 6.08,
+   "seconds": 0.1,
+   "qubits": 12
+  }
+ },
+ {
+  "n": 50,
+  "seed": 2,
+  "proved_optimal": true,
+  "fcfs": {
+   "total_rs": 13374.4,
+   "energy_rs": 10179.6,
+   "avg_wait_min": 54.6,
+   "max_wait_min": 180.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 4.65
+  },
+  "milp": {
+   "total_rs": 11921.2,
+   "energy_rs": 9802.4,
+   "avg_wait_min": 29.4,
+   "max_wait_min": 210.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 6.49
+  },
+  "lns_qaoa": {
+   "total_rs": 12397.9,
+   "energy_rs": 9888.6,
+   "avg_wait_min": 37.8,
+   "max_wait_min": 210.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 6.19,
+   "seconds": 41.4,
+   "qubits": 12
+  },
+  "lns_exact": {
+   "total_rs": 12443.1,
+   "energy_rs": 9701.4,
+   "avg_wait_min": 42.0,
+   "max_wait_min": 210.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 6.42,
+   "seconds": 0.1,
+   "qubits": 12
+  },
+  "lns_random1": {
+   "total_rs": 13189.4,
+   "energy_rs": 10046.9,
+   "avg_wait_min": 52.2,
+   "max_wait_min": 210.0,
+   "served": 50,
+   "unserved": 0,
+   "peak_kw": 315.0,
+   "avg_km": 5.32,
+   "seconds": 0.1,
+   "qubits": 12
+  }
+ }
+]

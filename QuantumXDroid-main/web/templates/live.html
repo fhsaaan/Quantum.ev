@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum.ev Live Dispatch</title>
+  <link rel="icon" type="image/png" href="/static/img/favicon.png">
+  <meta name="description" content="See how a charging bay stays useful while the next car is still driving to it.">
+  <link rel="stylesheet" href="/static/css/live.css?v=2">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/"><img class="brand-logo" src="/static/img/logo.png" alt=""><span>Quantum.ev</span></a>
+  <nav><a href="/">Fleet map</a><a class="here" href="/live">Live dispatch</a></nav>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>Can another car use the bay while the first car is still driving there?</h1>
+    <p>Yes, if the bay is booked from the car's arrival time and not from the moment it sets off.
+       Press <strong>Play</strong> and watch one evening unfold. Cars appear one at a time, as they would in real life.</p>
+  </section>
+
+  <section class="controls" aria-label="Simulation controls">
+    <div class="group" role="group" aria-label="Scenario">
+      <span class="label">Scenario</span>
+      <button class="seg" data-scenario="gap">The gap: 3 cars, 1 bay</button>
+      <button class="seg" data-scenario="rush">Evening rush</button>
+    </div>
+    <div class="group" id="rush-controls">
+      <label class="label" for="cars">Cars: <output id="cars-out">50</output></label>
+      <input id="cars" type="range" min="10" max="80" step="5" value="50">
+      <button class="plain" id="reseed">New evening</button>
+    </div>
+    <div class="group" role="group" aria-label="Dispatch rule">
+      <span class="label">Dispatch rule</span>
+      <button class="seg" data-policy="hold">Lock bay on departure</button>
+      <button class="seg" data-policy="nearest">Book by arrival time</button>
+      <button class="seg" data-policy="rolling">Book by arrival + re-plan</button>
+    </div>
+  </section>
+
+  <p class="explain" id="explain"></p>
+
+  <section class="stats" id="stats" aria-live="polite"></section>
+
+  <section class="board">
+    <div class="transport">
+      <button class="primary" id="play">Play</button>
+      <input id="clock" type="range" min="0" max="16" step="0.25" value="0" aria-label="Time of evening">
+      <output id="clock-out">16:00</output>
+    </div>
+    <div class="legend">
+      <span><i class="key charge"></i>Charging</span>
+      <span><i class="key road"></i>Car on the way, bay still usable</span>
+      <span><i class="key lock"></i>Car on the way, bay locked and empty</span>
+    </div>
+    <div class="scroll"><div id="gantt"></div></div>
+    <div class="log" id="log" aria-live="polite"></div>
+  </section>
+
+  <section>
+    <h2>All rules on this evening</h2>
+    <div class="scroll"><table id="compare"></table></div>
+    <p class="note">Lower cost is better. "Perfect hindsight" knows every car in advance, so it cannot be achieved live. It shows how much is left to gain.</p>
+  </section>
+
+  <section>
+    <h2>How this runs in the real world</h2>
+    <ol class="steps">
+      <li><strong>A car asks for a charge.</strong> The driver app or fleet telematics sends location and battery level.</li>
+      <li><strong>The system works out the ETA.</strong> The bay is booked for the arrival time only, so it stays free until then.</li>
+      <li><strong>Every new request triggers a re-plan.</strong> Cars that have not left can be given a better slot. Cars already on the road keep theirs.</li>
+      <li><strong>Drivers get one message:</strong> which bay, and when to leave. A driver is only re-routed if it saves more than ₹5.</li>
+    </ol>
+    <h3>What a real deployment still needs</h3>
+    <ul class="gaps">
+      <li><strong>Live ETAs.</strong> If the first car is early, or the gap car overruns, one of them queues. This demo assumes cars are on time, so a real system needs a safety margin.</li>
+      <li><strong>Finer time slots.</strong> The model uses 30-minute slots, so gaps shorter than that are not used.</li>
+      <li><strong>Charger data.</strong> Bay status from the operator (for example over OCPP), because bays also get used by the public.</li>
+    </ul>
+    <p class="note">Everything on this page uses a synthetic fleet and an illustrative tariff, with Kochi-area stations approximated. These are simulation results, not field measurements.</p>
+  </section>
+</main>
+<script src="/static/js/live.js?v=1"></script>
+</body>
+</html>

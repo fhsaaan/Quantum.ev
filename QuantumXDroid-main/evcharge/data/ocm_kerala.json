@@ -1,0 +1,103 @@
+[
+  {
+    "ocm_id": 313584,
+    "name": "Pallam KSEB EVCS - ChargeMOD",
+    "operator": "ChargeMOD (KSEB)",
+    "address": "Main Centre Road, Near KSEB TMR Division, Pallam, Kottayam, Kerala 686007",
+    "latitude": 9.543065,
+    "longitude": 76.514231,
+    "usage_cost_rs_kwh": 27.41,
+    "chargers": [
+      {"type": "CCS (Type 2)", "kw": 30.0, "current": "DC", "count": 1},
+      {"type": "CHAdeMO", "kw": 30.0, "current": "DC", "count": 1},
+      {"type": "GB-T DC", "kw": 15.0, "current": "DC", "count": 1},
+      {"type": "CEE 3 Pin", "kw": 3.3, "current": "AC", "count": 3}
+    ]
+  },
+  {
+    "ocm_id": 480424,
+    "name": "Nucleus Mall EVCS - GO EC",
+    "operator": "GO EC (IN)",
+    "address": "Kochi - Dhanushkodi Road, Maradu, Thrippunithura, Kerala 682304",
+    "latitude": 9.939769,
+    "longitude": 76.330848,
+    "usage_cost_rs_kwh": 22.48,
+    "chargers": [
+      {"type": "CCS (Type 2)", "kw": 90.0, "current": "DC", "count": 2},
+      {"type": "CCS (Type 2)", "kw": 80.0, "current": "DC", "count": 2}
+    ]
+  },
+  {
+    "ocm_id": 313624,
+    "name": "LiON EVCS - ChargeMOD Maradu",
+    "operator": "ChargeMOD",
+    "address": "Kochi Dhanushkodi Road, Near Sree Murugan Cafe, Maradu, Kerala 682038",
+    "latitude": 9.938000,
+    "longitude": 76.334000,
+    "usage_cost_rs_kwh": 22.50,
+    "chargers": [
+      {"type": "CCS (Type 2)", "kw": 60.0, "current": "DC", "count": 2}
+    ]
+  },
+  {
+    "ocm_id": 313625,
+    "name": "EVM La Maison Citroen - Kundannoor",
+    "operator": "ChargeMOD",
+    "address": "NH 66, Kundannoor, Maradu, Kerala 682304",
+    "latitude": 9.932000,
+    "longitude": 76.321000,
+    "usage_cost_rs_kwh": 23.00,
+    "chargers": [
+      {"type": "CCS (Type 2)", "kw": 50.0, "current": "DC", "count": 2}
+    ]
+  },
+  {
+    "ocm_id": 480423,
+    "name": "Crowne Plaza Kochi EVCS",
+    "operator": "Statiq / GO EC",
+    "address": "Kundanoor Junction, Maradu, Kochi, Kerala 682304",
+    "latitude": 9.930000,
+    "longitude": 76.318000,
+    "usage_cost_rs_kwh": 24.00,
+    "chargers": [
+      {"type": "CCS (Type 2)", "kw": 60.0, "current": "DC", "count": 2}
+    ]
+  },
+  {
+    "ocm_id": 313437,
+    "name": "The Windsor Castle Hotel EVCS",
+    "operator": "ChargeMOD",
+    "address": "MC Road, Kodimatha Bridge, Kottayam, Kerala 686013",
+    "latitude": 9.568000,
+    "longitude": 76.520000,
+    "usage_cost_rs_kwh": 25.00,
+    "chargers": [
+      {"type": "CCS (Type 2)", "kw": 60.0, "current": "DC", "count": 2}
+    ]
+  },
+  {
+    "ocm_id": 480417,
+    "name": "Manipuzha Lazza EVCS",
+    "operator": "ChargeMOD",
+    "address": "MC Road, Kodimatha, Kottayam, Kerala 686001",
+    "latitude": 9.560000,
+    "longitude": 76.517000,
+    "usage_cost_rs_kwh": 22.00,
+    "chargers": [
+      {"type": "CCS (Type 2)", "kw": 30.0, "current": "DC", "count": 1},
+      {"type": "Type 2 AC", "kw": 7.4, "current": "AC", "count": 2}
+    ]
+  },
+  {
+    "ocm_id": 313586,
+    "name": "Indraprastha Hotel EVOK",
+    "operator": "ChargeMOD",
+    "address": "Main Central Road, Kumaranellor, Kottayam, Kerala 686006",
+    "latitude": 9.601000,
+    "longitude": 76.525000,
+    "usage_cost_rs_kwh": 23.50,
+    "chargers": [
+      {"type": "CCS (Type 2)", "kw": 50.0, "current": "DC", "count": 2}
+    ]
+  }
+]

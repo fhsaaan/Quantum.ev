@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum.ev — Real-World EV Fleet Charging Optimizer</title>
+  <link rel="icon" type="image/png" href="/static/img/favicon.png">
+  <meta name="description" content="Quantum-powered EV charging optimization using Qiskit QAOA and real OpenChargeMap station data from Kerala, India.">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- App CSS (Cache-busted) -->
+  <link rel="stylesheet" href="/static/css/style.css?v=3">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ═══ Navbar (Clean White/Green/Black) ═══ -->
+  <nav class="navbar">
+    <a class="navbar-brand" href="#">
+      <img class="brand-logo" src="/static/img/logo.png" alt="">
+      <div>
+        <h1>Quantum.ev</h1>
+        <span>EV Fleet Charging Optimizer · Kerala Network</span>
+      </div>
+    </a>
+    <div class="navbar-status">
+      <a class="status-chip green" href="/live">
+        <span class="dot"></span>
+        Live dispatch demo
+      </a>
+      <div class="status-chip">
+        OpenChargeMap snapshot
+      </div>
+      <div class="status-chip">
+        ⚛ QAOA research mode (simulated, about 1 min)
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ Sidebar ═══ -->
+  <aside class="sidebar">
+
+    <!-- Real-World Entity Testing Scenarios -->
+    <div class="panel-section">
+      <div class="section-header">
+        <span class="section-title">🧪 Real-World Fleet Scenarios</span>
+        <span class="section-badge">Presets</span>
+      </div>
+      <div class="scenario-grid">
+        <button class="scenario-card" id="btn-scenario-delivery" type="button">
+          <div class="scenario-icon">📦</div>
+          <div class="scenario-info">
+            <h4>E-Commerce Delivery Fleet</h4>
+            <p>6 vans (Kottayam Depot) · Evening return (16:30–21:00) · 15–28% SoC</p>
+          </div>
+        </button>
+        <button class="scenario-card" id="btn-scenario-cabs" type="button">
+          <div class="scenario-icon">🚖</div>
+          <div class="scenario-info">
+            <h4>Kochi Electric Cabs</h4>
+            <p>8 rideshare EVs (Maradu/Kochi Hub) · Shift change · 20–35% SoC</p>
+          </div>
+        </button>
+        <button class="scenario-card" id="btn-scenario-commuters" type="button">
+          <div class="scenario-icon">🚗</div>
+          <div class="scenario-info">
+            <h4>State Highway Commuters</h4>
+            <p>5 mixed EVs (MC Road Corridor) · High urgency · 10–25% SoC</p>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Manual Vehicle Addition -->
+    <div class="panel-section">
+      <div class="section-header">
+        <span class="section-title">➕ Add Custom EV</span>
+        <span class="section-badge" id="hint-badge">Click map to set pin</span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Battery Level (Initial SoC)</label>
+        <div class="range-wrap">
+          <input type="range" id="soc-slider" min="5" max="60" value="25">
+          <span class="range-value" id="soc-display">25%</span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Battery Capacity</label>
+          <select class="form-select" id="battery-select">
+            <option value="30">30 kWh (Tiago EV)</option>
+            <option value="40" selected>40 kWh (Nexon EV)</option>
+            <option value="50">50 kWh (MG ZS EV)</option>
+            <option value="60">60 kWh (BYD Atto 3)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Vehicle Model</label>
+          <select class="form-select" id="model-select">
+            <option value="tata_nexon" selected>Tata Nexon EV</option>
+            <option value="mg_zs">MG ZS EV</option>
+            <option value="byd_atto">BYD Atto 3</option>
+            <option value="generic">Delivery Van</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Arrival Window (Ready)</label>
+          <select class="form-select" id="ready-select">
+            <option value="16:00">16:00</option>
+            <option value="16:30">16:30</option>
+            <option value="17:00" selected>17:00</option>
+            <option value="17:30">17:30</option>
+            <option value="18:00">18:00</option>
+            <option value="18:30">18:30</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Departure Deadline</label>
+          <select class="form-select" id="deadline-select">
+            <option value="20:00">20:00</option>
+            <option value="21:00">21:00</option>
+            <option value="22:00" selected>22:00</option>
+            <option value="23:00">23:00</option>
+            <option value="23:30">23:30</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group" id="click-location" style="display:none;">
+        <label class="form-label">📍 Pinned Coordinates</label>
+        <div class="form-input" id="location-display" style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--accent);background:var(--green-50);">
+          —
+        </div>
+      </div>
+
+      <button class="btn btn-secondary btn-block btn-sm" id="btn-add-vehicle" disabled>
+        ➕ Add Pinned EV to Fleet
+      </button>
+    </div>
+
+    <!-- Active Fleet List -->
+    <div class="panel-section" style="flex:1;">
+      <div class="section-header">
+        <span class="section-title">📋 Active Fleet</span>
+        <span class="section-badge" id="fleet-count">0 vehicles</span>
+      </div>
+      <div class="fleet-list" id="fleet-list">
+        <div style="text-align:center;padding:16px;color:var(--text-muted);font-size:0.78rem;">
+          Select a real-world scenario above or click the map to add vehicles.
+        </div>
+      </div>
+    </div>
+
+    <!-- KSEB Electricity Tariff & Execution -->
+    <div class="panel-section">
+      <div class="section-header">
+        <span class="section-title">⚡ KSEB Time-of-Use Tariff</span>
+        <span class="section-badge">₹/kWh</span>
+      </div>
+      <div class="tariff-chart" id="tariff-chart"></div>
+      <div class="tariff-labels">
+        <span>16:00 (₹7)</span>
+        <span>18:00 (₹11 Peak)</span>
+        <span>22:00 (₹5 Night)</span>
+        <span>24:00</span>
+      </div>
+      <div class="tariff-legend">
+        <span><span class="pill" style="background:var(--green-500)"></span> Off-Peak (₹5)</span>
+        <span><span class="pill" style="background:var(--green-200)"></span> Shoulder (₹7)</span>
+        <span><span class="pill" style="background:var(--black)"></span> Peak (₹11)</span>
+      </div>
+
+      <div style="margin-top: 14px;">
+        <button class="btn btn-green btn-block" id="btn-optimize" disabled>
+          ⚛ Run Quantum QAOA Optimization
+        </button>
+        <div class="btn-group" style="margin-top:8px;">
+          <button class="btn btn-secondary btn-sm" id="btn-clear" style="flex:1;">
+            Clear All
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ═══ Map Area ═══ -->
+  <div class="map-area">
+    <div id="map"></div>
+
+    <div class="map-instruction" id="map-hint">
+      <span class="pulse-green"></span>
+      Click anywhere on Kerala map to place an EV or select a fleet scenario on the left
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading">
+      <div class="spinner"></div>
+      <div class="loading-text">
+        Executing QAOA Circuit on Qiskit Aer Statevector Engine...
+      </div>
+      <p style="font-size:0.75rem;color:var(--text-secondary);">
+        Constructing Problem Ising Hamiltonian & XY-Mixer
+      </p>
+    </div>
+
+    <!-- Slide-in Results Panel -->
+    <div class="results-panel" id="results-panel">
+      <div class="results-header">
+        <h2>⚡ Quantum Optimization Results</h2>
+        <button class="results-close" id="results-close" type="button">✕</button>
+      </div>
+      <div class="results-body" id="results-body"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="/static/js/app.js?v=3"></script>
+</body>
+</html>

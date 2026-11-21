@@ -1,0 +1,122 @@
+[
+ {
+  "cars": 15,
+  "seeds": 10,
+  "hold": {
+   "total_rs": 3538.9,
+   "avg_wait_min": 19.2,
+   "unserved": 0.0
+  },
+  "nearest": {
+   "total_rs": 3377.0,
+   "avg_wait_min": 8.0,
+   "unserved": 0.0
+  },
+  "cheapest": {
+   "total_rs": 3255.9,
+   "avg_wait_min": 4.8,
+   "unserved": 0.0
+  },
+  "rolling": {
+   "total_rs": 3247.8,
+   "avg_wait_min": 3.8,
+   "unserved": 0.0
+  },
+  "hindsight": {
+   "total_rs": 3238.4,
+   "avg_wait_min": 3.4,
+   "unserved": 0.0
+  },
+  "moved_per_evening": 0.0
+ },
+ {
+  "cars": 30,
+  "seeds": 10,
+  "hold": {
+   "total_rs": 7764.7,
+   "avg_wait_min": 47.8,
+   "unserved": 0.1
+  },
+  "nearest": {
+   "total_rs": 7204.6,
+   "avg_wait_min": 24.7,
+   "unserved": 0.0
+  },
+  "cheapest": {
+   "total_rs": 6755.1,
+   "avg_wait_min": 14.5,
+   "unserved": 0.0
+  },
+  "rolling": {
+   "total_rs": 6685.6,
+   "avg_wait_min": 14.6,
+   "unserved": 0.0
+  },
+  "hindsight": {
+   "total_rs": 6607.3,
+   "avg_wait_min": 13.3,
+   "unserved": 0.0
+  },
+  "moved_per_evening": 0.0
+ },
+ {
+  "cars": 50,
+  "seeds": 10,
+  "hold": {
+   "total_rs": 16421.8,
+   "avg_wait_min": 87.0,
+   "unserved": 7.8
+  },
+  "nearest": {
+   "total_rs": 12886.2,
+   "avg_wait_min": 51.5,
+   "unserved": 0.0
+  },
+  "cheapest": {
+   "total_rs": 12057.8,
+   "avg_wait_min": 40.3,
+   "unserved": 0.0
+  },
+  "rolling": {
+   "total_rs": 11775.1,
+   "avg_wait_min": 37.1,
+   "unserved": 0.0
+  },
+  "hindsight": {
+   "total_rs": 11441.4,
+   "avg_wait_min": 32.8,
+   "unserved": 0.0
+  },
+  "moved_per_evening": 2.0
+ },
+ {
+  "cars": 80,
+  "seeds": 10,
+  "hold": {
+   "total_rs": 33837.6,
+   "avg_wait_min": 111.9,
+   "unserved": 33.3
+  },
+  "nearest": {
+   "total_rs": 25520.2,
+   "avg_wait_min": 87.8,
+   "unserved": 10.2
+  },
+  "cheapest": {
+   "total_rs": 25114.6,
+   "avg_wait_min": 80.4,
+   "unserved": 9.4
+  },
+  "rolling": {
+   "total_rs": 22332.8,
+   "avg_wait_min": 80.1,
+   "unserved": 2.7
+  },
+  "hindsight": {
+   "total_rs": 21311.4,
+   "avg_wait_min": 68.3,
+   "unserved": 2.3
+  },
+  "moved_per_evening": 28.1
+ }
+]
